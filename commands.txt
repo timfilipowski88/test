@@ -1,0 +1,331 @@
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ Games/
+'Google Drive'/
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{b4f170e3-29df-11eb-8450-b56efa2ee6e8}.TM.blf
+ NTUSER.DAT{b4f170e3-29df-11eb-8450-b56efa2ee6e8}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{b4f170e3-29df-11eb-8450-b56efa2ee6e8}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+'New folder'/
+'New folder (2)'/
+ OneDrive/
+ Pictures/
+ PrintHood@
+ Recent@
+ Roaming/
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+'Tim Filipowski'/
+ Videos/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~
+$ documents
+bash: documents: command not found
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~
+$ documents/
+bash: documents/: Is a directory
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~
+$ cd documents/
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents
+$ cd github/
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github
+$ cd/
+bash: cd/: No such file or directory
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents/github
+$ cd ..
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents
+$ cd..
+bash: cd..: command not found
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/documents
+$ cd ..
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~
+$ cd desktop/
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop
+$ mkdir test
+mkdir: cannot create directory ‘test’: File exists
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop
+$ rmdir test
+rmdir: failed to remove 'test': Directory not empty
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop
+$ rm -rf test
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop
+$ mkdir test
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop
+$ cd test/
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test
+$ touch index.html style.css
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test
+$ ls
+index.html  style.css
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test
+$ rm index.html
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test
+$ ls
+style.css
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test
+$ touch index.html
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test
+$ ls
+index.html  style.css
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test
+$ git init
+Initialized empty Git repository in C:/Users/Tim/Desktop/test/.git/
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git add .
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   style.css
+
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git commit -m create working directory with html/css
+error: pathspec 'working' did not match any file(s) known to git
+error: pathspec 'directory' did not match any file(s) known to git
+error: pathspec 'with' did not match any file(s) known to git
+error: pathspec 'html/css' did not match any file(s) known to git
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git commit -m "created working directory with html/css"
+[master (root-commit) 75cd193] created working directory with html/css
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ create mode 100644 style.css
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ status
+bash: status: command not found
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git add index.html
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git commit -m "update html"
+[master 08fd5fd] update html
+ 1 file changed, 11 insertions(+)
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git add .
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   style.css
+
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git commit -m "update css"
+[master c0e8b9c] update css
+ 1 file changed, 6 insertions(+)
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git log
+commit c0e8b9c80a7019caae3f951f1015f701bd4bb7ff (HEAD -> master)
+Author: timfilipowski88 <timfilipowski88@gmail.com>
+Date:   Fri Jan 22 12:26:46 2021 -0700
+
+    update css
+
+commit 08fd5fded81be59cbd8744f0b0fc8b2721aaed97
+Author: timfilipowski88 <timfilipowski88@gmail.com>
+Date:   Fri Jan 22 12:25:01 2021 -0700
+
+    update html
+
+commit 75cd19329af947db1afcddca34a203e6fc0bd336
+Author: timfilipowski88 <timfilipowski88@gmail.com>
+Date:   Fri Jan 22 12:20:40 2021 -0700
+
+    created working directory with html/css
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git log -2
+commit c0e8b9c80a7019caae3f951f1015f701bd4bb7ff (HEAD -> master)
+Author: timfilipowski88 <timfilipowski88@gmail.com>
+Date:   Fri Jan 22 12:26:46 2021 -0700
+
+    update css
+
+commit 08fd5fded81be59cbd8744f0b0fc8b2721aaed97
+Author: timfilipowski88 <timfilipowski88@gmail.com>
+Date:   Fri Jan 22 12:25:01 2021 -0700
+
+    update html
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git revert -n c0e8b9c
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master|REVERTING)
+$ git status
+On branch master
+You are currently reverting commit c0e8b9c.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   style.css
+
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master|REVERTING)
+$ git commit -m "revertd c0e8b9c"
+[master aad993b] revertd c0e8b9c
+ 1 file changed, 6 deletions(-)
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+        modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git add index.html
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   style.css
+
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git add .
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+        modified:   style.css
+
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git commit -m "update html and css"
+[master 37eb034] update html and css
+ 2 files changed, 11 insertions(+)
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
+$ git log -3
+commit 37eb034405e9b0bc708c0ab04479f8b4ece23467 (HEAD -> master)
+Author: timfilipowski88 <timfilipowski88@gmail.com>
+Date:   Fri Jan 22 12:32:15 2021 -0700
+
+    update html and css
+
+commit aad993b99b86d7a1514655283df238ac4e3e6605
+Author: timfilipowski88 <timfilipowski88@gmail.com>
+Date:   Fri Jan 22 12:29:24 2021 -0700
+
+    revertd c0e8b9c
+
+commit c0e8b9c80a7019caae3f951f1015f701bd4bb7ff
+Author: timfilipowski88 <timfilipowski88@gmail.com>
+Date:   Fri Jan 22 12:26:46 2021 -0700
+
+    update css
+
+Tim@LAPTOP-36NMQ978 MINGW64 ~/desktop/test (master)
